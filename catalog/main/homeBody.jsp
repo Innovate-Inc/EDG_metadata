@@ -195,10 +195,7 @@ String epaReg7Url = site + popURL + region7TabSearchStr + urlSuffix;
 String epaReg8Url = site + popURL + region8TabSearchStr + urlSuffix;
 String epaReg9Url = site + popURL + region9TabSearchStr + urlSuffix;
 String epaReg10Url = site + popURL + region10TabSearchStr+ urlSuffix;
-
-
 HttpClientRequest client = new HttpClientRequest();
-
 //data reading from file
 JSONObject dataObject=null;
 String dataUrl = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+request.getContextPath()+"/catalog/json/cached_json/metadata_json.json";
@@ -210,8 +207,6 @@ try{
    }catch(Exception e){
     e.printStackTrace();
 }
-
-
 JSONObject cliChobj= dataObject.getJSONObject("climateChange");
 JSONObject ejobj= dataObject.getJSONObject("environmentalJustice");
 JSONObject fDataobj= dataObject.getJSONObject("facilityData");
@@ -226,7 +221,6 @@ JSONObject reg7obj= dataObject.getJSONObject("region7");
 JSONObject reg8obj= dataObject.getJSONObject("region8");
 JSONObject reg9obj= dataObject.getJSONObject("region9");
 JSONObject reg10obj= dataObject.getJSONObject("region10");
-
 %>
 
 <f:verbatim>
@@ -242,7 +236,6 @@ JSONObject reg10obj= dataObject.getJSONObject("region10");
     color: #333;
     font-weight: bold;
 }
-
 .site-name span {
     background: url(https://www.epa.gov/sites/all/themes/epa/img/svg/epa-logo.svg) no-repeat;
     color: transparent;
@@ -362,7 +355,6 @@ body, button, input, select, textarea {
     text-align: center;
     text-decoration: none;
 }
-
 .secondary-nav {
   position: relative;
   z-index: 10;
@@ -372,12 +364,10 @@ body, button, input, select, textarea {
     float: right;
     margin-top: .875em;
 }
-
 .page-title {
     padding-top: 0.25em;
 	visibility: hidden;
 }
-
 .main-column, .region-highlighted {
     clear: left;
     margin-top: -4.4em;
